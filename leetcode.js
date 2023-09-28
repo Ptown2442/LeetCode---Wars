@@ -69,3 +69,10 @@ var candy = function(ratings) {
     }
     return (diff)? (count+diff) : count;
 };
+
+
+let tried = new Set(ratings);
+
+
+
+console.log(tried.size)
