@@ -75,4 +75,27 @@ let tried = new Set(ratings);
 
 
 
-console.log(tried.size)
+let s = 'string1';
+let t = '1gnirts';
+
+
+var isIsomorphic = function(s, t) {
+    if (s.length !== t.length) return false;
+    const mapS = new Map();
+    const mapT = new Map();
+
+    for (let i = 0; i < s.length; i++) {
+        const charS = s[i];
+        const charT = t[i];
+
+        if ((!mapS.has(charS) && !mapT.has(charT))) {
+            mapS.set(charS, charT);
+            mapT.set(charT, charS);
+        } else if (mapS.get(charS) !== charT || mapT.get(charT) !== charS) {
+            return false;
+        }
+    }
+
+    return true;
+
+};
