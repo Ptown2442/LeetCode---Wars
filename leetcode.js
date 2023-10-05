@@ -99,3 +99,36 @@ var isIsomorphic = function(s, t) {
     return true;
 
 };
+
+
+function isHappy(n) {
+    let val = n;
+    let isThinking = true;
+    setTimeout((isThinking) => {
+        return isThinking = false;
+    }, 12000);
+    if (val === 1) return true;
+    if (val < 0) return false;
+
+    while (val > 1) {
+
+        let currSum = 0;
+        let ref = String(val);
+        for (let i of ref) {
+            let val2 = parseInt(i);
+            currSum += (val2 * val2);
+        }
+        val = currSum;
+        if (!isThinking) return false;
+    }
+    return true;
+}
+function timmer () {
+    let isDone = false;
+    setTimeout(() => {
+        isDone = true;
+    }, 5000);
+}
+
+let lister = [4, 5, 5, [6, 7, 8], 9, 4, [3, 2, 2], 1];
+for (let i of lister) console.log(i.length);
