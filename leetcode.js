@@ -132,3 +132,24 @@ function timmer () {
 
 let lister = [4, 5, 5, [6, 7, 8], 9, 4, [3, 2, 2], 1];
 for (let i of lister) console.log(i.length);
+
+class Node{
+    constructor (a,b = null) {
+        this.val = a;
+        this.next = b;
+    }
+
+}
+
+class LinkList {
+    constructor(a) {
+        this.head = a;
+    }
+}
+
+let l1 = new Node(5,8);
+let l2 = new Node(8,7);
+let l3 = new Node(7);
+
+let list1 = new LinkList(5);
+console.log(list1.head);
